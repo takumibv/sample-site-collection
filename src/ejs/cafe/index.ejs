@@ -34,26 +34,29 @@
           />
         </div>
       </section>
-      <nav class="p-nav">
-        <ul>
-          <li><a href="#">manu</a></li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">access</a></li>
-        </ul>
+      <nav>
+        <div class="container">
+          <ul class="p-nav">
+            <li class="p-nav__item"><a href="#">manu</a></li>
+            <li class="p-nav__item"><a href="#">blog</a></li>
+            <li class="p-nav__item"><a href="#">access</a></li>
+          </ul>
+        </div>
       </nav>
       <section class="p-concept">
         <div class="container">
           <div class="p-concept__visual">
             <img
+              class="p-concept__visual-image"
               src="/assets/images/cafe/concept.png"
               alt="爽やかなカフェのカップ"
               srcset="/assets/images/cafe/concept.png 1x, /assets/images/cafe/concept@2x.png 2x"
             />
           </div>
           <div class="p-concept__content">
-            <p class="concept__subtitle">Concept</p>
-            <h2 class="concept__title">心静かにコーヒーを</h2>
-            <p class="concept__text">
+            <p class="p-concept__subtitle">Concept</p>
+            <h2 class="p-concept__title">心静かにコーヒーを</h2>
+            <p class="p-concept__text">
               立ち止まって、<br />空の青さを眺めて、<br />一息つきましょう
             </p>
           </div>
@@ -63,12 +66,13 @@
         <div class="container">
           <h2 class="c-section-title">blog</h2>
           <p class="c-section-subtitle">ブログ</p>
-          <ul>
+          <ul class="p-blog__list">
             <li>
               <a href="#" class="c-article">
                 <article>
-                  <div class="c-article__image">
+                  <div class="c-article__image-area">
                     <img
+                      class="c-article__image"
                       src="/assets/images/cafe/thumbnail01.png"
                       alt="ブログのサムネイル"
                       srcset="
@@ -85,8 +89,9 @@
             <li>
               <a href="#" class="c-article">
                 <article>
-                  <div class="c-article__image">
+                  <div class="c-article__image-area">
                     <img
+                      class="c-article__image"
                       src="/assets/images/cafe/thumbnail02.png"
                       alt="ブログのサムネイル"
                       srcset="
@@ -103,8 +108,9 @@
             <li>
               <a href="#" class="c-article">
                 <article>
-                  <div class="c-article__image">
+                  <div class="c-article__image-area">
                     <img
+                      class="c-article__image"
                       src="/assets/images/cafe/thumbnail03.png"
                       alt="ブログのサムネイル"
                       srcset="
@@ -123,8 +129,9 @@
             <li>
               <a href="#" class="c-article">
                 <article>
-                  <div class="c-article__image">
+                  <div class="c-article__image-area">
                     <img
+                      class="c-article__image"
                       src="/assets/images/cafe/thumbnail04.png"
                       alt="ブログのサムネイル"
                       srcset="
@@ -141,8 +148,9 @@
             <li>
               <a href="#" class="c-article">
                 <article>
-                  <div class="c-article__image">
+                  <div class="c-article__image-area">
                     <img
+                      class="c-article__image"
                       src="/assets/images/cafe/thumbnail05.png"
                       alt="ブログのサムネイル"
                       srcset="
@@ -159,8 +167,9 @@
             <li>
               <a href="#" class="c-article">
                 <article>
-                  <div class="c-article__image">
+                  <div class="c-article__image-area">
                     <img
+                      class="c-article__image"
                       src="/assets/images/cafe/thumbnail06.png"
                       alt="ブログのサムネイル"
                       srcset="
@@ -179,6 +188,9 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="p-footer">
+      <img class="p-footer__logo" src="/assets/images/cafe/logo-white.svg" alt="sky coffee" />
+      <p class="p-footer__copywrite">©sky coffee</p>
+    </footer>
   </body>
 </html>

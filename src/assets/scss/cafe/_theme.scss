@@ -1,48 +1,22 @@
 :root {
   --color-white: #fff;
-  --color-base: #f5f5f5;
-  --color-primary: #72ad8c;
-  --color-primary-weak: #e1f5e9;
-  --color-secondary: #ad6761;
-  --color-secondary-weak: #fac3be;
-  --color-text-black: #555;
-  --color-text-black-dark: #333;
-  --color-text-secondary: #707070;
-  --color-text-secondary-weak: #aaa;
-  --color-text-link: #7299ad;
-  --color-shadow: #888;
-
-  // シャドウ
-  --shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  --color-primary: #24a8bf;
+  --color-text-black: #333333;
 }
 
 .dark {
-  --color-white: #181818;
-  --color-base: #333;
-  --color-primary: #72ad8c;
-  --color-primary-weak: #446853;
-  --color-secondary: #ad6761;
-  --color-secondary-weak: #ba8580;
-  --color-text-black: #ccc;
-  --color-text-black-dark: #fff;
-  --color-text-secondary: #aaa;
-  --color-text-secondary-weak: #999;
-  --color-text-link: #6cc4f0;
-  --color-shadow: #000;
-
-  --shadow: 0px 0px 6px rgba(0, 0, 0, 1);
 }
 
 // タイポグラフィ
 $font-saying: athelas, serif !default;
-$font-eng: lato, sans-serif !default;
-$font-jp: "Source Han Sans JP", sans-serif !default;
+$font-eng: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-jp: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 
 // レイアウト
 $container-width-pc: 1180px !default;
 $container-width-sp: 375px !default;
 
-$breakpoint-sp: $container-width-pc !default;
+$breakpoint-sp: 820px !default;
 
 // アニメーション
 $transition-base: 0.2s ease-out !default;

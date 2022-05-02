@@ -1,18 +1,102 @@
-@import "./top/theme";
+@import "./cafe/theme";
 @import "./foundation/mixin";
 @import "./foundation/reset";
 @import "./foundation/base";
+
+body {
+  font-family: $font-jp;
+  color: var(--color-text-black);
+  color: #333;
+  letter-spacing: 2px;
+}
 
 .container {
   position: relative;
   margin: auto;
   padding: 0 20px;
-  max-width: 100%;
-  width: $container-width-sp;
+  width: 100%;
+  // max-width: $container-width-sp;
 
   @include breakpoint-pc() {
-    width: $container-width-pc;
+    max-width: $container-width-pc;
     padding: 0 35px;
+  }
+}
+
+.c-section-title {
+  color: var(--color-primary);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+.c-section-subtitle {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 30px;
+}
+
+// 記事 <a>タグ
+.c-article {
+  display: block;
+  text-decoration: none;
+  margin: 0 0 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-article__image-area {
+  margin: 0 0 15px;
+}
+
+.c-article__image {
+  width: 100%;
+}
+
+.c-article__title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 5px;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.c-article__date {
+  font-size: 12px;
+}
+
+.c-button {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 18px;
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  color: var(--color-primary);
+  appearance: button;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 5px);
+    background-image: url(/assets/images/cafe/icon_arrow-right.svg);
+    width: 10px;
+    height: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -24,6 +108,7 @@
   align-items: center;
 }
 
+// ヒーロー
 .p-hero {
 }
 
@@ -41,4 +126,79 @@
   @include breakpoint-sp() {
     display: none;
   }
+}
+
+// ナビゲーション
+.p-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 70px;
+}
+
+.p-nav__item {
+  margin: 0 25px;
+
+  a {
+    font-family: $font-eng;
+    text-decoration: none;
+    color: var(--color-text-black);
+    color: #333;
+    font-size: 16px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.p-concept {
+  margin: 0 0 40px;
+}
+
+.p-concept__visual {
+}
+
+.p-concept__visual-image {
+  width: 100%;
+}
+
+.p-concept__content {
+  padding: 30px 20px;
+}
+
+.p-concept__subtitle {
+  font-size: 16px;
+  margin: 0 0 24px;
+}
+
+.p-concept__title {
+  color: var(--color-primary);
+  color: #24a8bf;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 24px;
+}
+
+.p-concept__text {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.p-footer {
+  background-color: #000000;
+  padding: 20px;
+  margin: 50px 0 0;
+  text-align: center;
+}
+
+.p-footer__logo {
+  margin: 40px auto;
+}
+
+.p-footer__copywrite {
+  color: #8b8b8b;
+  font-size: 10px;
+  font-family: $font-eng;
+  letter-spacing: 0;
 }
