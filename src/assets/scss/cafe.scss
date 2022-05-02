@@ -29,6 +29,11 @@ body {
   font-weight: bold;
   text-align: center;
   margin: 0 0 5px;
+
+  @include breakpoint-pc() {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
 }
 
 .c-section-subtitle {
@@ -36,6 +41,10 @@ body {
   text-align: center;
   font-weight: bold;
   margin: 0 0 30px;
+
+  @include breakpoint-pc() {
+    font-size: 13px;
+  }
 }
 
 // 記事 <a>タグ
@@ -43,6 +52,10 @@ body {
   display: block;
   text-decoration: none;
   margin: 0 0 20px;
+
+  @include breakpoint-pc() {
+    margin-bottom: 30px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -98,6 +111,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  @include breakpoint-pc() {
+    max-width: 220px;
+    margin: auto;
+  }
 }
 
 // ヘッダー
@@ -106,6 +124,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include breakpoint-pc() {
+    height: 156px;
+    img {
+      width: 280px;
+    }
+  }
 }
 
 // ヒーロー
@@ -134,10 +159,18 @@ body {
   justify-content: center;
   align-items: center;
   margin: 30px 0 70px;
+
+  @include breakpoint-pc() {
+    margin-bottom: 90px;
+  }
 }
 
 .p-nav__item {
   margin: 0 25px;
+
+  @include breakpoint-pc() {
+    margin: 0 40px;
+  }
 
   a {
     font-family: $font-eng;
@@ -149,11 +182,24 @@ body {
     &:hover {
       opacity: 0.8;
     }
+
+    @include breakpoint-pc() {
+      font-size: 18px;
+    }
   }
 }
 
 .p-concept {
-  margin: 0 0 40px;
+  margin: 0 auto 40px;
+
+  @include breakpoint-pc() {
+    display: flex;
+    margin-bottom: 90px;
+
+    > * {
+      width: 50%;
+    }
+  }
 }
 
 .p-concept__visual {
@@ -165,6 +211,13 @@ body {
 
 .p-concept__content {
   padding: 30px 20px;
+
+  @include breakpoint-pc() {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .p-concept__subtitle {
@@ -178,11 +231,36 @@ body {
   font-size: 26px;
   font-weight: bold;
   margin: 0 0 24px;
+
+  @include breakpoint-pc() {
+    font-size: 32px;
+  }
 }
 
 .p-concept__text {
   font-size: 15px;
   line-height: 1.8;
+
+  @include breakpoint-pc() {
+    font-size: 16px;
+  }
+}
+
+.p-blog {
+}
+
+ul.p-blog__list {
+  @include breakpoint-pc() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px;
+
+    > li {
+      width: 33.3333%;
+      padding: 0 15px;
+    }
+  }
 }
 
 .p-footer {
@@ -194,6 +272,11 @@ body {
 
 .p-footer__logo {
   margin: 40px auto;
+
+  @include breakpoint-pc() {
+    margin: 50px auto;
+    width: 180px;
+  }
 }
 
 .p-footer__copywrite {
@@ -201,4 +284,8 @@ body {
   font-size: 10px;
   font-family: $font-eng;
   letter-spacing: 0;
+
+  @include breakpoint-pc() {
+    font-size: 12px;
+  }
 }
