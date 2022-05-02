@@ -1,0 +1,44 @@
+@import "./top/theme";
+@import "./foundation/mixin";
+@import "./foundation/reset";
+@import "./foundation/base";
+
+.container {
+  position: relative;
+  margin: auto;
+  padding: 0 20px;
+  max-width: 100%;
+  width: $container-width-sp;
+
+  @include breakpoint-pc() {
+    width: $container-width-pc;
+    padding: 0 35px;
+  }
+}
+
+// ヘッダー
+.p-header {
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-hero {
+}
+
+.p-hero__image {
+  width: 100%;
+}
+
+.p-hero__image--sp {
+  @include breakpoint-pc() {
+    display: none;
+  }
+}
+
+.p-hero__image--pc {
+  @include breakpoint-sp() {
+    display: none;
+  }
+}

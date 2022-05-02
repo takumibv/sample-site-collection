@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../components/_head.ejs", { title: "sky coffee", filename: "cafe" }) %>
+  </head>
+  <body>
+    <header class="p-header">
+      <h1>
+        <a href="/cafe">
+          <img src="/assets/images/cafe/logo.svg" alt="sky coffee" />
+        </a>
+      </h1>
+    </header>
+    <main>
+      <section>
+        <div class="p-hero">
+          <img
+            class="p-hero__image p-hero__image--sp"
+            src="/assets/images/cafe/sp_main-visual.png"
+            srcset="
+              /assets/images/cafe/sp_main-visual.png    1x,
+              /assets/images/cafe/sp_main-visual@2x.png 2x
+            "
+            alt="複数の青いカップのコーヒー"
+          />
+          <img
+            class="p-hero__image p-hero__image--pc"
+            src="/assets/images/cafe/pc_main-visual.png"
+            srcset="
+              /assets/images/cafe/pc_main-visual.png    1x,
+              /assets/images/cafe/pc_main-visual@2x.png 2x
+            "
+            alt="複数の青いカップのコーヒー"
+          />
+        </div>
+      </section>
+      <nav class="p-nav">
+        <ul>
+          <li><a href="#">manu</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">access</a></li>
+        </ul>
+      </nav>
+      <section class="p-concept">
+        <div class="container">
+          <div class="p-concept__visual">
+            <img
+              src="/assets/images/cafe/concept.png"
+              alt="爽やかなカフェのカップ"
+              srcset="/assets/images/cafe/concept.png 1x, /assets/images/cafe/concept@2x.png 2x"
+            />
+          </div>
+          <div class="p-concept__content">
+            <p class="concept__subtitle">Concept</p>
+            <h2 class="concept__title">心静かにコーヒーを</h2>
+            <p class="concept__text">
+              立ち止まって、<br />空の青さを眺めて、<br />一息つきましょう
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="p-blog">
+        <div class="container">
+          <h2 class="c-section-title">blog</h2>
+          <p class="c-section-subtitle">ブログ</p>
+          <ul>
+            <li>
+              <a href="#" class="c-article">
+                <article>
+                  <div class="c-article__image">
+                    <img
+                      src="/assets/images/cafe/thumbnail01.png"
+                      alt="ブログのサムネイル"
+                      srcset="
+                        /assets/images/cafe/thumbnail01.png    1x,
+                        /assets/images/cafe/thumbnail01@2x.png 2x
+                      "
+                    />
+                  </div>
+                  <h4 class="c-article__title">コーヒーカー始めました。</h4>
+                  <p class="c-article__date">2030.08.08</p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-article">
+                <article>
+                  <div class="c-article__image">
+                    <img
+                      src="/assets/images/cafe/thumbnail02.png"
+                      alt="ブログのサムネイル"
+                      srcset="
+                        /assets/images/cafe/thumbnail02.png    1x,
+                        /assets/images/cafe/thumbnail02@2x.png 2x
+                      "
+                    />
+                  </div>
+                  <h4 class="c-article__title">濃厚クリーミーなミルクをどうぞ</h4>
+                  <p class="c-article__date">2030.08.05</p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-article">
+                <article>
+                  <div class="c-article__image">
+                    <img
+                      src="/assets/images/cafe/thumbnail03.png"
+                      alt="ブログのサムネイル"
+                      srcset="
+                        /assets/images/cafe/thumbnail03.png    1x,
+                        /assets/images/cafe/thumbnail03@2x.png 2x
+                      "
+                    />
+                  </div>
+                  <h4 class="c-article__title">
+                    Sky Coffeeのオリジナル曲が完成！無料ダウンロード可能です。
+                  </h4>
+                  <p class="c-article__date">2030.08.02</p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-article">
+                <article>
+                  <div class="c-article__image">
+                    <img
+                      src="/assets/images/cafe/thumbnail04.png"
+                      alt="ブログのサムネイル"
+                      srcset="
+                        /assets/images/cafe/thumbnail04.png    1x,
+                        /assets/images/cafe/thumbnail04@2x.png 2x
+                      "
+                    />
+                  </div>
+                  <h4 class="c-article__title">ハイキング用のコーヒーを販売中です。</h4>
+                  <p class="c-article__date">2030.07.28</p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-article">
+                <article>
+                  <div class="c-article__image">
+                    <img
+                      src="/assets/images/cafe/thumbnail05.png"
+                      alt="ブログのサムネイル"
+                      srcset="
+                        /assets/images/cafe/thumbnail05.png    1x,
+                        /assets/images/cafe/thumbnail05@2x.png 2x
+                      "
+                    />
+                  </div>
+                  <h4 class="c-article__title">ショップの壁を塗ってみました。</h4>
+                  <p class="c-article__date">2030.07.27</p>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="c-article">
+                <article>
+                  <div class="c-article__image">
+                    <img
+                      src="/assets/images/cafe/thumbnail06.png"
+                      alt="ブログのサムネイル"
+                      srcset="
+                        /assets/images/cafe/thumbnail06.png    1x,
+                        /assets/images/cafe/thumbnail06@2x.png 2x
+                      "
+                    />
+                  </div>
+                  <h4 class="c-article__title">ブログをはじめました。</h4>
+                  <p class="c-article__date">2030.07.26</p>
+                </article>
+              </a>
+            </li>
+          </ul>
+          <button class="c-button">ブログ一覧</button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <%- include("./components/_head.ejs", { title: "ホーム", filename: "top" }) %>
   </head>
   <body>
-    <h1>hello~!!!</h1>
+    <header>
+      <h1>
+        <a href="/cafe"> Top </a>
+      </h1>
+    </header>
+    <section class="container">
+      <div class="hoge">aa</div>
+    </section>
   </body>
 </html>
