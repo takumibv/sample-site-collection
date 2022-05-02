@@ -22,16 +22,16 @@ const server = () => browserSync.init(config.browserSync);
 const clarn = (cb) => rimraf(config.path.root.dest, cb);
 
 // コピー
-const copy = () =>
-  gulp
+const copy = async () =>
+  await gulp
     .src(config.path.copy.src, { base: config.path.root.src })
     .pipe(cache("copy"))
     .pipe(plumber())
     .pipe(gulp.dest(config.path.root.dest))
     .pipe(browserSync.stream());
 
-const ejsCompile = () =>
-  gulp
+const ejsCompile = async () =>
+  await gulp
     .src(config.path.ejs.src, {
       base: config.path.ejs.base,
     })
@@ -40,8 +40,8 @@ const ejsCompile = () =>
     .pipe(gulp.dest(config.path.ejs.output))
     .pipe(browserSync.stream());
 
-const sassCompile = () =>
-  gulp
+const sassCompile = async () =>
+  await gulp
     .src(config.path.scss.src, { base: config.path.scss.base })
     .pipe(plumber())
     .pipe(sass(config.scss.options))
@@ -63,12 +63,12 @@ const jsCompile = async () => {
 };
 
 const watch = () => {
-  gulp.watch(config.path.root.src, build);
+  gulp.watch(config.path.root.src, gulp.series(copy, ejsCompile, sassCompile, jsCompile));
 };
 
 const build = gulp.series(clarn, copy, ejsCompile, sassCompile, jsCompile);
 
-exports.build = gulp.series(clarn, copy, ejsCompile, sassCompile, jsCompile);
+exports.build = build;
 exports.default = gulp.series(
   clarn,
   copy,

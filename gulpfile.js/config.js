@@ -14,9 +14,8 @@ const config = {
     },
     ejs: {
       src: ["./src/ejs/**/*.ejs", "!./src/ejs/**/_*.ejs"],
-      output: "./public/html/",
-      base: "./src/html/",
-      watch: "./src/html/**/*.ejs",
+      output: "./public/",
+      base: "./src/ejs/",
     },
     script: {
       src: "./src/assets/js/**/*.js",
@@ -30,9 +29,9 @@ const config = {
   },
   browserSync: {
     server: {
-      baseDir: "./",
+      baseDir: "./public",
     },
-    startPath: "/public",
+    startPath: "/",
   },
   webpack: {
     prod: "../webpack.prod.js",
