@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 const glob = require("glob");
 
-const entries = ["index"];
+const entries = ["top"];
 
 module.exports = {
   mode: "production",
