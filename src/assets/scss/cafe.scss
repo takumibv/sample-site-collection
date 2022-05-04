@@ -125,6 +125,10 @@ body {
   justify-content: center;
   align-items: center;
 
+  img {
+    width: 160px;
+  }
+
   @include breakpoint-pc() {
     height: 156px;
     img {
@@ -272,6 +276,7 @@ ul.p-blog__list {
 
 .p-footer__logo {
   margin: 40px auto;
+  width: 140px;
 
   @include breakpoint-pc() {
     margin: 50px auto;
