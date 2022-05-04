@@ -24,7 +24,7 @@
 
       <nav>
         <ul class="header__pc-nav">
-          <li class="header__pc-nav-item">
+          <li class="header__pc-nav-item is-active">
             <a href="<%= root %>/company/">ホーム</a>
           </li>
           <li class="header__pc-nav-item">
@@ -36,7 +36,7 @@
         </ul>
       </nav>
 
-      <div id="nav-drawer" class="drawer drawer--ope">
+      <div id="nav-drawer" class="drawer">
         <div
           class="drawer__header-nav-toggle js-drawer-toggle"
           data-target-id="nav-drawer"
@@ -69,7 +69,7 @@
         <div class="hero">
           <picture class="hero__bg">
             <source
-              media="(min-width: 1180px)"
+              media="(min-width: 820px)"
               srcset="<%= root %>/assets/images/company/pc_hero.png 1x, <%= root %>/assets/images/company/pc_hero@2x.png 2x"
             />
             <img
@@ -146,20 +146,22 @@
       </div>
     </section>
     <footer class="footer">
-      <nav>
-        <ul class="footer-nav">
-          <li class="footer-nav__item">
-            <a href="<%= root %>/company/">ホーム</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="<%= root %>/company/message">メッセージ</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="<%= root %>/company/profile">会社概要</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="footer__copywrite">©START</p>
+      <div class="container">
+        <nav>
+          <ul class="footer-nav">
+            <li class="footer-nav__item">
+              <a href="<%= root %>/company/">ホーム</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="<%= root %>/company/message">メッセージ</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="<%= root %>/company/profile">会社概要</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__copywrite">©START</p>
+      </div>
     </footer>
   </body>
 </html>

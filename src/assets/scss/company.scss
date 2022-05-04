@@ -9,6 +9,15 @@ body {
   color: #333;
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
 .container {
   position: relative;
   margin: auto;
@@ -27,14 +36,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include breakpoint-pc() {
+    height: 90px;
+  }
 }
 
 .header__logo {
   margin-left: 20px;
+
+  @include breakpoint-pc() {
+    margin-left: 70px;
+
+    img {
+      width: 167px;
+    }
+  }
 }
 
 .header__pc-nav {
   display: none;
+  margin-right: 55px;
+  font-size: 16px;
 
   @include breakpoint-pc() {
     display: flex;
@@ -42,33 +65,22 @@ body {
   }
 }
 
-.drawer__header-nav-toggle {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  align-self: stretch;
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.header__pc-nav-item {
+  margin: 0 15px;
 
-  &:hover {
-    opacity: 0.8;
-  }
+  &.is-active {
+    color: var(--color-primary);
 
-  .material-symbols-outlined {
-    font-size: 32px;
+    a {
+      cursor: default;
+    }
   }
 }
 
-.drawer__header-nav-icon-close.material-symbols-outlined {
-  display: inline;
-}
-
-.drawer__header-nav-icon-open.material-symbols-outlined {
-  display: none;
+.drawer {
+  @include breakpoint-pc() {
+    display: none;
+  }
 }
 
 .drawer--open {
@@ -91,6 +103,31 @@ body {
   .drawer__surface {
     transform: translateX(0);
   }
+}
+
+.drawer__header-nav-toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  align-self: stretch;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .material-symbols-outlined {
+    font-size: 32px;
+  }
+}
+
+.drawer__header-nav-icon-close.material-symbols-outlined {
+  display: inline;
+}
+
+.drawer__header-nav-icon-open.material-symbols-outlined {
+  display: none;
 }
 
 .drawer__overlay {
@@ -138,6 +175,10 @@ body {
 .hero {
   position: relative;
   margin-bottom: 40px;
+
+  @include breakpoint-pc() {
+    margin-bottom: 64px;
+  }
 }
 
 .hero__bg {
@@ -159,21 +200,50 @@ body {
 .hero__title {
   font-size: 80px;
   font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+
+  @include breakpoint-pc() {
+    font-size: 160px;
+  }
 }
 
 .hero__subtitle {
   font-size: 20px;
   margin-top: 12px;
+
+  @include breakpoint-pc() {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
 }
 
 .section {
   position: relative;
   margin-bottom: 60px;
+
+  @include breakpoint-pc() {
+    margin-bottom: 80px;
+  }
+}
+
+.section--flex {
+  @include breakpoint-pc() {
+    display: flex;
+
+    .section__title {
+      margin-right: 96px;
+      white-space: nowrap;
+    }
+  }
 }
 
 .section__title {
   font-size: 32px;
   color: var(--color-primary);
+
+  @include breakpoint-pc() {
+    font-size: 40px;
+  }
 }
 
 .section__bg-text {
@@ -184,10 +254,20 @@ body {
   font-weight: bold;
   right: 4px;
   top: 0;
+
+  @include breakpoint-pc() {
+    font-size: 168px;
+    top: -48px;
+    right: 24px;
+  }
 }
 
 .news {
   margin-top: 8px;
+
+  @include breakpoint-pc() {
+    margin-top: -16px;
+  }
 }
 
 .news__item {
@@ -196,19 +276,47 @@ body {
   font-size: 15px;
   border-bottom: 1px solid #ededed;
   padding: 18px 0;
+
+  @include breakpoint-pc() {
+    display: flex;
+    align-items: baseline;
+    padding: 16px 0;
+  }
 }
 
 .news__date {
   display: inline-block;
   margin-bottom: 4px;
+
+  @include breakpoint-pc() {
+    width: 116px;
+    margin-bottom: 0;
+  }
 }
 
 .news__title {
   line-height: 1.6;
+
+  @include breakpoint-pc() {
+    flex: 1;
+  }
+}
+
+.service {
+  @include breakpoint-pc() {
+    display: flex;
+    align-items: stretch;
+    margin: 58px -15px 0;
+  }
 }
 
 .service__item {
   margin: 20px 0;
+
+  @include breakpoint-pc() {
+    flex: 1;
+    margin: 0 15px 20px;
+  }
 }
 
 .service-card {
@@ -220,12 +328,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include breakpoint-pc() {
+    height: 100%;
+    padding: 50px;
+  }
 }
 
 .service-card__icon.material-symbols-outlined {
   font-size: 60px;
   color: var(--color-primary);
   margin-bottom: 10px;
+
+  @include breakpoint-pc() {
+    font-size: 46px;
+  }
 
   &.is-fill {
     font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -236,6 +353,11 @@ body {
   font-size: 16px;
   text-align: center;
   margin-bottom: 12px;
+
+  @include breakpoint-pc() {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
 }
 
 .service-card__description {
@@ -245,7 +367,11 @@ body {
 
 .footer {
   background-color: var(--color-primary);
-  padding: 40px 20px 30px;
+  padding: 40px 0 30px;
+
+  @include breakpoint-pc() {
+    padding: 64px 0 48px;
+  }
 }
 
 .footer-nav {
@@ -259,6 +385,11 @@ body {
   color: var(--color-white);
   font-size: 12px;
 
+  @include breakpoint-pc() {
+    font-size: 14px;
+    margin-right: 40px;
+  }
+
   a {
     text-decoration: none;
   }
@@ -267,4 +398,8 @@ body {
 .footer__copywrite {
   color: var(--color-white);
   font-size: 10px;
+
+  @include breakpoint-pc() {
+    font-size: 12px;
+  }
 }
