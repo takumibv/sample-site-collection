@@ -4,11 +4,38 @@
     <%- include("./components/_head.ejs", { title: "サンプルサイト集", filename: "top" }) %>
   </head>
   <body>
-    <header class="container">
-      <h1>
-        <a href="<%= root %>/cafe"> Top </a>
-      </h1>
+    <header class="header">
+      <h1 class="header__left"><a href="<%= root %>/">サンプルサイト集</a></h1>
     </header>
-    <section class="container"></section>
+    <main>
+      <section class="container">
+        <ul class="site">
+          <li>
+            <a class="site__item" href="<%= root %>/company">
+              <h2 class="site__item-title">企業サイト「START」</h2>
+              <img
+                class="site__item-image"
+                src="<%= root %>/assets/images/top/sample_company.png"
+                alt=""
+              />
+            </a>
+            <!-- <details>
+              <summary>制作期間</summary>
+              <div>2時間</div>
+            </details> -->
+          </li>
+          <li>
+            <a class="site__item" href="<%= root %>/cafe">
+              <h2 class="site__item-title">カフェサイト「Blue Cafe」</h2>
+              <img
+                class="site__item-image"
+                src="<%= root %>/assets/images/top/sample_cafe.png"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>

@@ -7,11 +7,40 @@
   position: relative;
   margin: auto;
   padding: 0 20px;
-  max-width: 100%;
-  width: $container-width-sp;
+  width: 100%;
 
   @include breakpoint-pc() {
-    width: $container-width-pc;
+    max-width: $container-width-pc;
     padding: 0 35px;
   }
+}
+
+.header {
+  height: 60px;
+  padding: 0 32px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.site {
+  margin: 40px 0;
+  padding: 0 40px;
+}
+
+.site__item {
+  display: inline-block;
+  margin: 0 0 24px;
+}
+
+.site__item-title {
+  color: rgb(56, 97, 172);
+  margin-bottom: 8px;
+}
+
+.site__item-image {
+  width: 100%;
+  border: 1px solid #ddd;
 }
