@@ -5,17 +5,8 @@
 
 body {
   font-family: $font-jp;
-  color: var(--color-text-black);
   color: #333;
-}
-
-a {
-  text-decoration: none;
-
-  &:hover {
-    opacity: 0.8;
-    text-decoration: none;
-  }
+  color: var(--color-text-black);
 }
 
 .container {
@@ -27,6 +18,12 @@ a {
   @include breakpoint-pc() {
     max-width: $container-width-pc;
     padding: 0 35px;
+  }
+}
+
+.container--sm {
+  @include breakpoint-pc() {
+    max-width: 850px;
   }
 }
 
@@ -239,7 +236,9 @@ a {
 
 .section__title {
   font-size: 32px;
+  font-weight: bold;
   color: var(--color-primary);
+  line-height: 1.5;
 
   @include breakpoint-pc() {
     font-size: 40px;
@@ -365,6 +364,100 @@ a {
   line-height: 1.6;
 }
 
+.content-header {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint-pc() {
+    height: 190px;
+  }
+}
+
+.content-header__title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-white);
+
+  @include breakpoint-pc() {
+    font-size: 40px;
+  }
+}
+
+.message {
+}
+
+.message__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 1.5;
+  margin: 30px 0 20px;
+
+  @include breakpoint-pc() {
+    font-size: 40px;
+    margin: 60px 0 36px;
+  }
+}
+
+.message__subtitle {
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 36px;
+
+  @include breakpoint-pc() {
+    font-size: 18px;
+  }
+}
+
+.message__profile {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 15px 8px 0;
+
+  img {
+    width: 100%;
+  }
+
+  @include breakpoint-pc() {
+    margin: 0 25px 25px 0;
+  }
+}
+
+.message__content {
+  font-size: 15px;
+  line-height: 1.5;
+
+  @include breakpoint-pc() {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+.message__image {
+  margin: 50px 0;
+  height: 260px;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint-pc() {
+    height: 400px;
+  }
+}
+
+.link {
+  color: var(--color-text-link);
+  text-decoration: underline;
+}
+
 .footer {
   background-color: var(--color-primary);
   padding: 40px 0 30px;
@@ -382,8 +475,11 @@ a {
 
 .footer-nav__item {
   margin-right: 26px;
-  color: var(--color-white);
   font-size: 12px;
+
+  a {
+    color: var(--color-white);
+  }
 
   @include breakpoint-pc() {
     font-size: 14px;

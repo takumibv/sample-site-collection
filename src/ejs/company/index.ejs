@@ -15,54 +15,7 @@
     />
   </head>
   <body>
-    <header class="header">
-      <h1 class="header__logo">
-        <a href="<%= root %>/company">
-          <img src="<%= root %>/assets/images/company/logo.svg" alt="start" />
-        </a>
-      </h1>
-
-      <nav>
-        <ul class="header__pc-nav">
-          <li class="header__pc-nav-item is-active">
-            <a href="<%= root %>/company/">ホーム</a>
-          </li>
-          <li class="header__pc-nav-item">
-            <a href="<%= root %>/company/message">メッセージ</a>
-          </li>
-          <li class="header__pc-nav-item">
-            <a href="<%= root %>/company/profile">会社概要</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div id="nav-drawer" class="drawer">
-        <div
-          class="drawer__header-nav-toggle js-drawer-toggle"
-          data-target-id="nav-drawer"
-          tabindex="0"
-        >
-          <span class="drawer__header-nav-icon-close material-symbols-outlined">menu</span>
-          <span class="drawer__header-nav-icon-open material-symbols-outlined">close</span>
-        </div>
-        <div class="drawer__overlay js-drawer-toggle" data-target-id="nav-drawer"></div>
-        <div class="drawer__surface">
-          <nav>
-            <ul class="drawer__nav">
-              <li class="drawer__nav-item drawer__nav-item--active">
-                <a href="<%= root %>/company/">ホーム</a>
-              </li>
-              <li class="drawer__nav-item">
-                <a href="<%= root %>/company/message">メッセージ</a>
-              </li>
-              <li class="drawer__nav-item">
-                <a href="<%= root %>/company/profile">会社概要</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <%- include("./_header.ejs", { page: "home" }) %>
 
     <main>
       <section>
@@ -84,84 +37,68 @@
           </div>
         </div>
       </section>
+      <section class="section section--flex container">
+        <h2 class="section__title">ニュース</h2>
+        <ul class="news">
+          <li>
+            <a href="#" class="news__item">
+              <time datetime="2023-02-10" class="news__date">2023.02.10</time>
+              <p class="news__title">コーポレートサイトをリニューアルしました。</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="news__item">
+              <time datetime="2023-02-08" class="news__date">2023.02.08</time>
+              <p class="news__title">採用を強化中です！一緒に働きませんか？</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="news__item">
+              <time datetime="2022-02-02" class="news__date">2022.02.02</time>
+              <p class="news__title">
+                人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="section container">
+        <h2 class="section__title">サービス</h2>
+        <p class="section__bg-text">SERVICE</p>
+        <div class="service">
+          <div class="service__item">
+            <a href="#" class="service-card">
+              <span class="service-card__icon is-fill material-symbols-outlined"> work </span>
+              <p class="service-card__title">人材紹介業</p>
+              <p class="service-card__description">
+                新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。
+              </p>
+            </a>
+          </div>
+          <div class="service__item">
+            <a href="#" class="service-card">
+              <span class="service-card__icon is-fill material-symbols-outlined">
+                location_city
+              </span>
+              <p class="service-card__title">スクール事業</p>
+              <p class="service-card__description">
+                オンラインでWeb制作を学べるスクールを運営しています。
+              </p>
+            </a>
+          </div>
+          <div class="service__item">
+            <a href="#" class="service-card">
+              <span class="service-card__icon material-symbols-outlined"> desktop_windows </span>
+              <p class="service-card__title">Webメディア運営</p>
+              <p class="service-card__description">
+                人事系メディアやWebデザイン関連のメディアなどを複数運営しています。
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-    <section class="section section--flex container">
-      <h2 class="section__title">ニュース</h2>
-      <ul class="news">
-        <li>
-          <a href="#" class="news__item">
-            <time datetime="2023-02-10" class="news__date">2023.02.10</time>
-            <p class="news__title">コーポレートサイトをリニューアルしました。</p>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="news__item">
-            <time datetime="2023-02-08" class="news__date">2023.02.08</time>
-            <p class="news__title">採用を強化中です！一緒に働きませんか？</p>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="news__item">
-            <time datetime="2022-02-02" class="news__date">2022.02.02</time>
-            <p class="news__title">
-              人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
-            </p>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="section container">
-      <h2 class="section__title">サービス</h2>
-      <p class="section__bg-text">SERVICE</p>
-      <div class="service">
-        <div class="service__item">
-          <a href="#" class="service-card">
-            <span class="service-card__icon is-fill material-symbols-outlined"> work </span>
-            <p class="service-card__title">人材紹介業</p>
-            <p class="service-card__description">
-              新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。
-            </p>
-          </a>
-        </div>
-        <div class="service__item">
-          <a href="#" class="service-card">
-            <span class="service-card__icon is-fill material-symbols-outlined">
-              location_city
-            </span>
-            <p class="service-card__title">スクール事業</p>
-            <p class="service-card__description">
-              オンラインでWeb制作を学べるスクールを運営しています。
-            </p>
-          </a>
-        </div>
-        <div class="service__item">
-          <a href="#" class="service-card">
-            <span class="service-card__icon material-symbols-outlined"> desktop_windows </span>
-            <p class="service-card__title">Webメディア運営</p>
-            <p class="service-card__description">
-              人事系メディアやWebデザイン関連のメディアなどを複数運営しています。
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <nav>
-          <ul class="footer-nav">
-            <li class="footer-nav__item">
-              <a href="<%= root %>/company/">ホーム</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="<%= root %>/company/message">メッセージ</a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="<%= root %>/company/profile">会社概要</a>
-            </li>
-          </ul>
-        </nav>
-        <p class="footer__copywrite">©START</p>
-      </div>
-    </footer>
+
+    <%- include("./_footer.ejs") %>
   </body>
 </html>

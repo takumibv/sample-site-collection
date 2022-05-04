@@ -1,0 +1,50 @@
+<% var page = page || ""; %>
+
+<header class="header">
+  <h1 class="header__logo">
+    <a href="<%= root %>/company">
+      <img src="<%= root %>/assets/images/company/logo.svg" alt="start" />
+    </a>
+  </h1>
+
+  <nav>
+    <ul class="header__pc-nav">
+      <li class="header__pc-nav-item <%= page === 'home' ? 'is-active' : '' %>">
+        <a href="<%= root %>/company/">ホーム</a>
+      </li>
+      <li class="header__pc-nav-item <%= page === 'message' ? 'is-active' : '' %>">
+        <a href="<%= root %>/company/message">メッセージ</a>
+      </li>
+      <li class="header__pc-nav-item <%= page === 'profile' ? 'is-active' : '' %>">
+        <a href="<%= root %>/company/profile">会社概要</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="nav-drawer" class="drawer">
+    <div
+      class="drawer__header-nav-toggle js-drawer-toggle"
+      data-target-id="nav-drawer"
+      tabindex="0"
+    >
+      <span class="drawer__header-nav-icon-close material-symbols-outlined">menu</span>
+      <span class="drawer__header-nav-icon-open material-symbols-outlined">close</span>
+    </div>
+    <div class="drawer__overlay js-drawer-toggle" data-target-id="nav-drawer"></div>
+    <div class="drawer__surface">
+      <nav>
+        <ul class="drawer__nav">
+          <li class="drawer__nav-item <%= page === 'home' ? 'drawer__nav-item--active' : '' %>">
+            <a href="<%= root %>/company/">ホーム</a>
+          </li>
+          <li class="drawer__nav-item <%= page === 'message' ? 'drawer__nav-item--active' : '' %>">
+            <a href="<%= root %>/company/message">メッセージ</a>
+          </li>
+          <li class="drawer__nav-item <%= page === 'profile' ? 'drawer__nav-item--active' : '' %>">
+            <a href="<%= root %>/company/profile">会社概要</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
