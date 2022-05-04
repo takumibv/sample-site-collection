@@ -328,7 +328,7 @@ body {
   position: absolute;
   right: 10px;
   top: calc(50% - 5px);
-  background-image: url(/assets/images/cafe/icon_arrow-right.svg);
+  background-image: url(../images/cafe/icon_arrow-right.svg);
   width: 10px;
   height: 10px;
   background-position: center;
