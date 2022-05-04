@@ -1,0 +1,538 @@
+:root {
+  --color-white: #fff;
+  --color-primary: #24a8bf;
+  --color-text-black: #333333;
+}
+
+/*
+* css-wipe: https://github.com/stackcss/css-wipe
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* webkit specific styles */
+input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  vertical-align: baseline;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #555;
+  color: var(--color-text-black);
+  background: #fff;
+  background: var(--color-white);
+}
+
+a {
+  color: #7299ad;
+  color: var(--color-text-link);
+  text-decoration: underline;
+}
+@media (min-width: 820px) {
+  a {
+    text-decoration: none;
+  }
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+body {
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: var(--color-text-black);
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+}
+@media (min-width: 820px) {
+  .container {
+    max-width: 1180px;
+    padding: 0 35px;
+  }
+}
+
+.c-section-title {
+  color: var(--color-primary);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 5px;
+}
+@media (min-width: 820px) {
+  .c-section-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+}
+
+.c-section-subtitle {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 30px;
+}
+@media (min-width: 820px) {
+  .c-section-subtitle {
+    font-size: 13px;
+  }
+}
+
+.c-article {
+  display: block;
+  text-decoration: none;
+  margin: 0 0 20px;
+}
+@media (min-width: 820px) {
+  .c-article {
+    margin-bottom: 30px;
+  }
+}
+.c-article:hover {
+  opacity: 0.8;
+}
+
+.c-article__image-area {
+  margin: 0 0 15px;
+}
+
+.c-article__image {
+  width: 100%;
+}
+
+.c-article__title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 5px;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.c-article__date {
+  font-size: 12px;
+}
+
+.c-button {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 18px;
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  color: var(--color-primary);
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.c-button:hover {
+  opacity: 0.8;
+}
+.c-button::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 5px);
+  background-image: url(/assets/images/cafe/icon_arrow-right.svg);
+  width: 10px;
+  height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 820px) {
+  .c-button {
+    max-width: 220px;
+    margin: auto;
+  }
+}
+
+.p-header {
+  height: 92px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.p-header img {
+  width: 160px;
+}
+@media (min-width: 820px) {
+  .p-header {
+    height: 156px;
+  }
+  .p-header img {
+    width: 280px;
+  }
+}
+
+.p-hero__image {
+  width: 100%;
+}
+
+@media (min-width: 820px) {
+  .p-hero__image--sp {
+    display: none;
+  }
+}
+
+@media (max-width: 819px) {
+  .p-hero__image--pc {
+    display: none;
+  }
+}
+
+.p-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0 70px;
+}
+@media (min-width: 820px) {
+  .p-nav {
+    margin-bottom: 90px;
+  }
+}
+
+.p-nav__item {
+  margin: 0 25px;
+}
+@media (min-width: 820px) {
+  .p-nav__item {
+    margin: 0 40px;
+  }
+}
+.p-nav__item a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: var(--color-text-black);
+  color: #333;
+  font-size: 16px;
+}
+.p-nav__item a:hover {
+  opacity: 0.8;
+}
+@media (min-width: 820px) {
+  .p-nav__item a {
+    font-size: 18px;
+  }
+}
+
+.p-concept {
+  margin: 0 auto 40px;
+}
+@media (min-width: 820px) {
+  .p-concept {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 90px;
+  }
+  .p-concept > * {
+    width: 50%;
+  }
+}
+
+.p-concept__visual-image {
+  width: 100%;
+}
+
+.p-concept__content {
+  padding: 30px 20px;
+}
+@media (min-width: 820px) {
+  .p-concept__content {
+    padding-left: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.p-concept__subtitle {
+  font-size: 16px;
+  margin: 0 0 24px;
+}
+
+.p-concept__title {
+  color: var(--color-primary);
+  color: #24a8bf;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 24px;
+}
+@media (min-width: 820px) {
+  .p-concept__title {
+    font-size: 32px;
+  }
+}
+
+.p-concept__text {
+  font-size: 15px;
+  line-height: 1.8;
+}
+@media (min-width: 820px) {
+  .p-concept__text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 820px) {
+  ul.p-blog__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 -15px;
+  }
+  ul.p-blog__list > li {
+    width: 33.3333%;
+    padding: 0 15px;
+  }
+}
+
+.p-footer {
+  background-color: #000000;
+  padding: 20px;
+  margin: 50px 0 0;
+  text-align: center;
+}
+
+.p-footer__logo {
+  margin: 40px auto;
+  width: 140px;
+}
+@media (min-width: 820px) {
+  .p-footer__logo {
+    margin: 50px auto;
+    width: 180px;
+  }
+}
+
+.p-footer__copywrite {
+  color: #8b8b8b;
+  font-size: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0;
+}
+@media (min-width: 820px) {
+  .p-footer__copywrite {
+    font-size: 12px;
+  }
+}
