@@ -1,0 +1,575 @@
+@import "./seminar/theme";
+@import "./foundation/mixin";
+@import "./foundation/reset";
+@import "./foundation/base";
+
+body {
+  font-family: $font-jp;
+  color: #fff;
+  color: var(--color-text-black);
+  font-feature-settings: "palt";
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+
+  @include breakpoint-pc() {
+    max-width: $container-width-pc;
+    padding: 0 36px;
+  }
+}
+
+.header {
+  height: 90px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header__logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 30px;
+  color: var(--color-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 16px;
+
+  // @include breakpoint-pc() {
+  //   padding-right: 0;
+  // }
+}
+
+.nav__item {
+  & + & {
+    margin-left: 16px;
+
+    @include breakpoint-pc() {
+      margin-left: 30px;
+    }
+  }
+}
+
+.hero {
+  background: linear-gradient(
+    90deg,
+    #0e002e 0%,
+    #1e092b 23.1%,
+    #320c65 49.12%,
+    #a01b7c 79.8%,
+    #c21780 100%
+  );
+  height: 700px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__content {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+
+  @include breakpoint-pc() {
+    text-align: left;
+  }
+}
+
+.hero__subtitle {
+  font-weight: bold;
+  line-height: 1.2;
+  color: #d136d1;
+  font-size: 20px;
+  margin-bottom: 8px;
+
+  @include breakpoint-pc() {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.hero__title {
+  font-weight: bold;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 12px;
+
+  @include breakpoint-pc() {
+    font-size: 100px;
+    margin-bottom: 16px;
+  }
+}
+
+.hero__date {
+  font-weight: bold;
+  font-size: 36px;
+  color: #fff;
+}
+
+.hero__sign {
+  display: block;
+  width: 200px;
+  margin: 16px auto;
+
+  @include breakpoint-pc() {
+    position: absolute;
+    width: auto;
+    margin: 0;
+    left: 320px;
+    bottom: 24px;
+  }
+}
+
+.hero__image {
+  position: absolute;
+  z-index: 0;
+  max-width: 100%;
+  bottom: 0;
+  right: 0;
+
+  @include breakpoint-pc() {
+    right: 64px;
+  }
+}
+
+.hero__name {
+  position: absolute;
+  z-index: 0;
+  color: #fff;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+
+  @include breakpoint-pc() {
+    right: 64px;
+  }
+}
+
+.hero__name-title {
+  font-size: 21px;
+  margin-bottom: 4px;
+
+  small {
+    font-size: 16px;
+  }
+}
+
+.hero__name-description {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.section {
+  padding: 64px 0;
+  background-color: var(--color-black);
+
+  @include breakpoint-pc() {
+    padding: 110px 0;
+  }
+}
+
+.section--gradient {
+  background: linear-gradient(
+    135deg,
+    #0e002e 0%,
+    #0f002e 0%,
+    #1e092b 23.1%,
+    #320c65 49.12%,
+    #a01b7c 79.8%,
+    #c21780 100%
+  );
+}
+
+.section--register {
+  background-image: url(../images/seminar/register-bg.png);
+}
+
+.section__title {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  color: #d136d1;
+  letter-spacing: 0.05em;
+
+  @include breakpoint-pc() {
+    font-size: 60px;
+  }
+}
+
+.section__subtitle {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  margin: 10px 0 60px;
+
+  @include breakpoint-pc() {
+    font-size: 22px;
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include breakpoint-pc() {
+    flex-direction: row;
+  }
+}
+
+.about__left {
+  img {
+    max-width: 100%;
+
+    @include breakpoint-pc() {
+      max-width: 445px;
+    }
+  }
+}
+
+.about__content {
+  margin-top: 24px;
+
+  @include breakpoint-pc() {
+    margin-top: 0;
+    margin-left: 70px;
+  }
+}
+
+.about__subtitle {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 8px;
+
+  @include breakpoint-pc() {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.about__title {
+  font-size: 36px;
+  line-height: 1.5;
+  color: #d136d1;
+  margin-bottom: 24px;
+
+  @include breakpoint-pc() {
+    font-size: 48px;
+    margin-bottom: 36px;
+  }
+}
+
+.about__text {
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.8;
+
+  @include breakpoint-pc() {
+    font-size: 18px;
+  }
+}
+
+.about__datalist {
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.8;
+
+  dl {
+    display: flex;
+
+    dt {
+      width: 56px;
+    }
+  }
+}
+
+.about__btn-area {
+  text-align: center;
+
+  @include breakpoint-pc() {
+    text-align: left;
+  }
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  column-gap: 60px;
+
+  @include breakpoint-pc() {
+    flex-direction: row;
+  }
+
+  & + & {
+    margin-top: 60px;
+  }
+
+  &:nth-child(2n + 1) {
+    .speaker__content {
+      @include breakpoint-pc() {
+        order: -1;
+      }
+    }
+  }
+}
+
+.speaker__profile {
+  img {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include breakpoint-pc() {
+      width: unset;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.speaker__title {
+  font-weight: bold;
+  font-size: 36px;
+  color: #d136d1;
+  margin-bottom: 8px;
+
+  @include breakpoint-pc() {
+    font-size: 42px;
+  }
+}
+
+.speaker__subtitle {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 24px;
+
+  @include breakpoint-pc() {
+    font-size: 18px;
+    margin-bottom: 44px;
+  }
+}
+
+.speaker__descrition {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.session-table {
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid #d136d1;
+  }
+
+  th,
+  td {
+    padding: 16px 0;
+    display: block;
+
+    @include breakpoint-pc() {
+      padding: 48px 32px;
+      display: table-cell;
+    }
+  }
+
+  th {
+    font-weight: bold;
+    font-size: 22px;
+    text-align: left;
+    color: #fff;
+
+    @include breakpoint-pc() {
+      width: 300px;
+    }
+  }
+}
+
+.session-table__item {
+  display: block;
+}
+
+.session-table__item-title {
+  font-size: 22px;
+  color: #d136d1;
+  margin-bottom: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.session-table__item-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.register {
+  border: 5px solid #d136d1;
+  border-radius: 20px;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  background: #1a1a1a;
+
+  @include breakpoint-pc() {
+    padding: 88px;
+  }
+}
+
+.form {
+  & + & {
+    margin-top: 36px;
+  }
+}
+
+.form__label {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.form__label--required {
+  label::after {
+    content: "*必須";
+    margin-left: 11px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    color: #d136d1;
+  }
+}
+
+.radio {
+  vertical-align: middle;
+  margin-right: 30px;
+  margin-bottom: 16px;
+  display: block;
+
+  @include breakpoint-pc() {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  input,
+  span {
+    vertical-align: middle;
+  }
+}
+
+input.textbox,
+textarea.textbox,
+.selectbox {
+  border-radius: 6px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  border: none;
+  width: 100%;
+
+  @include breakpoint-pc() {
+    width: auto;
+  }
+
+  &::placeholder {
+    color: #8b8b8b;
+  }
+}
+
+input.textbox {
+  padding: 9px 16px;
+
+  @include breakpoint-pc() {
+    min-width: 300px;
+  }
+}
+
+textarea.textbox {
+  padding: 16px;
+
+  @include breakpoint-pc() {
+    min-width: 600px;
+    min-height: 255px;
+  }
+}
+
+.selectbox {
+  appearance: none;
+  padding: 9px 16px;
+
+  @include breakpoint-pc() {
+    min-width: 300px;
+  }
+}
+
+.btn {
+  color: var(--color-white);
+  background: linear-gradient(45deg, #c41a7f 0%, #664bbf 100%);
+  border-radius: 99999px;
+  outline: none;
+  appearance: none;
+  border: none;
+  padding: 16px;
+  box-shadow: 0 10px 0 var(--color-primary-dark);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 100%;
+
+  @include breakpoint-pc() {
+    padding: 24px;
+    min-width: 300px;
+  }
+
+  &:hover {
+    box-shadow: none;
+    transform: translateY(10px);
+  }
+}
+
+.btn--hero {
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+.btn--about {
+  min-width: 230px;
+  padding: 20px;
+}
+
+.btn--submit {
+  font-size: 20px;
+  margin: 40px 0 12px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer {
+  padding: 70px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  background-color: #141414;
+  letter-spacing: 0.08em;
+}
