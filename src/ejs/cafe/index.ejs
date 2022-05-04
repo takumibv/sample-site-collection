@@ -6,8 +6,8 @@
   <body>
     <header class="p-header">
       <h1>
-        <a href="/cafe">
-          <img src="/assets/images/cafe/logo.svg" alt="sky coffee" />
+        <a href="<%= root %>/cafe">
+          <img src="<%= root %>/assets/images/cafe/logo.svg" alt="sky coffee" />
         </a>
       </h1>
     </header>
@@ -16,19 +16,19 @@
         <div class="p-hero">
           <img
             class="p-hero__image p-hero__image--sp"
-            src="/assets/images/cafe/sp_main-visual.png"
+            src="<%= root %>/assets/images/cafe/sp_main-visual.png"
             srcset="
-              /assets/images/cafe/sp_main-visual.png    1x,
-              /assets/images/cafe/sp_main-visual@2x.png 2x
+              <%= root %>/assets/images/cafe/sp_main-visual.png    1x,
+              <%= root %>/assets/images/cafe/sp_main-visual@2x.png 2x
             "
             alt="複数の青いカップのコーヒー"
           />
           <img
             class="p-hero__image p-hero__image--pc"
-            src="/assets/images/cafe/pc_main-visual.png"
+            src="<%= root %>/assets/images/cafe/pc_main-visual.png"
             srcset="
-              /assets/images/cafe/pc_main-visual.png    1x,
-              /assets/images/cafe/pc_main-visual@2x.png 2x
+              <%= root %>/assets/images/cafe/pc_main-visual.png    1x,
+              <%= root %>/assets/images/cafe/pc_main-visual@2x.png 2x
             "
             alt="複数の青いカップのコーヒー"
           />
@@ -47,9 +47,9 @@
         <div class="p-concept__visual">
           <img
             class="p-concept__visual-image"
-            src="/assets/images/cafe/concept.png"
+            src="<%= root %>/assets/images/cafe/concept.png"
             alt="爽やかなカフェのカップ"
-            srcset="/assets/images/cafe/concept.png 1x, /assets/images/cafe/concept@2x.png 2x"
+            srcset="<%= root %>/assets/images/cafe/concept.png 1x, <%= root %>/assets/images/cafe/concept@2x.png 2x"
           />
         </div>
         <div class="p-concept__content">
@@ -70,11 +70,11 @@
                 <div class="c-article__image-area">
                   <img
                     class="c-article__image"
-                    src="/assets/images/cafe/thumbnail01.png"
+                    src="<%= root %>/assets/images/cafe/thumbnail01.png"
                     alt="ブログのサムネイル"
                     srcset="
-                      /assets/images/cafe/thumbnail01.png    1x,
-                      /assets/images/cafe/thumbnail01@2x.png 2x
+                      <%= root %>/assets/images/cafe/thumbnail01.png    1x,
+                      <%= root %>/assets/images/cafe/thumbnail01@2x.png 2x
                     "
                   />
                 </div>
@@ -89,11 +89,11 @@
                 <div class="c-article__image-area">
                   <img
                     class="c-article__image"
-                    src="/assets/images/cafe/thumbnail02.png"
+                    src="<%= root %>/assets/images/cafe/thumbnail02.png"
                     alt="ブログのサムネイル"
                     srcset="
-                      /assets/images/cafe/thumbnail02.png    1x,
-                      /assets/images/cafe/thumbnail02@2x.png 2x
+                      <%= root %>/assets/images/cafe/thumbnail02.png    1x,
+                      <%= root %>/assets/images/cafe/thumbnail02@2x.png 2x
                     "
                   />
                 </div>
@@ -108,11 +108,11 @@
                 <div class="c-article__image-area">
                   <img
                     class="c-article__image"
-                    src="/assets/images/cafe/thumbnail03.png"
+                    src="<%= root %>/assets/images/cafe/thumbnail03.png"
                     alt="ブログのサムネイル"
                     srcset="
-                      /assets/images/cafe/thumbnail03.png    1x,
-                      /assets/images/cafe/thumbnail03@2x.png 2x
+                      <%= root %>/assets/images/cafe/thumbnail03.png    1x,
+                      <%= root %>/assets/images/cafe/thumbnail03@2x.png 2x
                     "
                   />
                 </div>
@@ -129,11 +129,11 @@
                 <div class="c-article__image-area">
                   <img
                     class="c-article__image"
-                    src="/assets/images/cafe/thumbnail04.png"
+                    src="<%= root %>/assets/images/cafe/thumbnail04.png"
                     alt="ブログのサムネイル"
                     srcset="
-                      /assets/images/cafe/thumbnail04.png    1x,
-                      /assets/images/cafe/thumbnail04@2x.png 2x
+                      <%= root %>/assets/images/cafe/thumbnail04.png    1x,
+                      <%= root %>/assets/images/cafe/thumbnail04@2x.png 2x
                     "
                   />
                 </div>
@@ -148,11 +148,11 @@
                 <div class="c-article__image-area">
                   <img
                     class="c-article__image"
-                    src="/assets/images/cafe/thumbnail05.png"
+                    src="<%= root %>/assets/images/cafe/thumbnail05.png"
                     alt="ブログのサムネイル"
                     srcset="
-                      /assets/images/cafe/thumbnail05.png    1x,
-                      /assets/images/cafe/thumbnail05@2x.png 2x
+                      <%= root %>/assets/images/cafe/thumbnail05.png    1x,
+                      <%= root %>/assets/images/cafe/thumbnail05@2x.png 2x
                     "
                   />
                 </div>
@@ -167,11 +167,11 @@
                 <div class="c-article__image-area">
                   <img
                     class="c-article__image"
-                    src="/assets/images/cafe/thumbnail06.png"
+                    src="<%= root %>/assets/images/cafe/thumbnail06.png"
                     alt="ブログのサムネイル"
                     srcset="
-                      /assets/images/cafe/thumbnail06.png    1x,
-                      /assets/images/cafe/thumbnail06@2x.png 2x
+                      <%= root %>/assets/images/cafe/thumbnail06.png    1x,
+                      <%= root %>/assets/images/cafe/thumbnail06@2x.png 2x
                     "
                   />
                 </div>
@@ -185,7 +185,11 @@
       </section>
     </main>
     <footer class="p-footer">
-      <img class="p-footer__logo" src="/assets/images/cafe/logo-white.svg" alt="sky coffee" />
+      <img
+        class="p-footer__logo"
+        src="<%= root %>/assets/images/cafe/logo-white.svg"
+        alt="sky coffee"
+      />
       <p class="p-footer__copywrite">©sky coffee</p>
     </footer>
   </body>

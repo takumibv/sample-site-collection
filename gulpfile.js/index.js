@@ -27,15 +27,14 @@ const copy = async () =>
     .src(config.path.copy.src, { base: config.path.root.src })
     .pipe(cache("copy"))
     .pipe(plumber())
-    .pipe(gulp.dest(config.path.root.dest))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest(config.path.root.dest));
 
 const ejsCompile = async () =>
   await gulp
     .src(config.path.ejs.src, {
       base: config.path.ejs.base,
     })
-    .pipe(ejs({}, {}, { ext: ".html" }))
+    .pipe(ejs({ root: config.path.ejs.root }, {}, { ext: ".html" }))
     .pipe(rename({ extname: ".html" }))
     .pipe(gulp.dest(config.path.ejs.output))
     .pipe(browserSync.stream());

@@ -1,3 +1,5 @@
+const urlPrefix = process.env.URL_PREFIX ? "/" + process.env.URL_PREFIX : "";
+
 const config = {
   path: {
     root: {
@@ -16,6 +18,7 @@ const config = {
       src: ["./src/ejs/**/*.ejs", "!./src/ejs/**/_*.ejs"],
       output: "./public/",
       base: "./src/ejs/",
+      root: urlPrefix,
     },
     script: {
       src: "./src/assets/js/**/*.js",
