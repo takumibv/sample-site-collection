@@ -1,0 +1,25 @@
+:root {
+  --color-black: #141414;
+  --color-white: #fff;
+  --color-primary: #eb51c2;
+  --color-primary-dark: #dd118e;
+  --color-text-black: #111111;
+  --color-text-link: #349bf4;
+}
+
+.dark {
+}
+
+// タイポグラフィ
+$font-saying: athelas, serif !default;
+$font-eng: "Josefin Sans", "Noto Sans JP", sans-serif !default;
+$font-jp: "Josefin Sans", "Noto Sans JP", sans-serif !default;
+
+// レイアウト
+$container-width-pc: 1180px !default;
+$container-width-sp: 375px !default;
+
+$breakpoint-sp: 820px !default;
+
+// アニメーション
+$transition-base: 0.2s ease-out !default;
