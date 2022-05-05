@@ -8,10 +8,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
-  <!-- 20:00開始 -->
   <body>
-    <header class="header">
+    <header class="header header--bg">
       <h1 class="header__logo">
         <a href="<%= root %>/seminar">WDC</a>
       </h1>
@@ -34,12 +37,12 @@
       <section class="hero">
         <div class="container">
           <div class="hero__content">
-            <p class="hero__subtitle">Web Design Conference vol.24</p>
+            <p class="hero__subtitle">Web Design <br />Conference vol.24</p>
             <h1 class="hero__title">WORK <br />REVOLUTION</h1>
             <div>
               <time class="hero__date" datetime="2030-05-30">2030.05.30</time>
             </div>
-            <button class="btn btn--hero">お申し込み</button>
+            <a href="#register" class="btn btn--hero">お申し込み</a>
             <img
               class="hero__sign"
               src="<%= root %>/assets/images/seminar/teiji-de-kaerumon.png"
@@ -97,7 +100,7 @@
                 </dl>
               </div>
               <p class="about__btn-area">
-                <button class="btn">お申し込み</button>
+                <a href="#register" class="btn">お申し込み</a>
               </p>
             </div>
           </div>
@@ -229,7 +232,7 @@
           <h2 class="section__title">REGISTOR</h2>
           <p class="section__subtitle">お申し込み</p>
           <div class="register">
-            <form action="#" method="post">
+            <form action="#" method="get">
               <div class="form">
                 <p class="form__label form__label--required">
                   <label for="business">ご職業</label>
@@ -266,7 +269,7 @@
                   <label for="email">メールアドレス</label>
                 </p>
                 <div class="form__control">
-                  <input id="email" class="textbox" type="text" autocomplete="email" required />
+                  <input id="email" class="textbox" type="email" autocomplete="email" required />
                 </div>
               </div>
               <div class="form">
@@ -275,7 +278,7 @@
                   <span class="form__optional">（半角数字ハイフンなし）</span>
                 </p>
                 <div class="form__control">
-                  <input id="tel" class="textbox" type="text" autocomplete="tel" />
+                  <input id="tel" class="textbox" type="tel" autocomplete="tel" />
                 </div>
               </div>
               <div class="form">
@@ -309,6 +312,9 @@
           </div>
         </div>
       </section>
+      <button class="fab-btn">
+        <span class="fab-btn__icon material-symbols-rounded">keyboard_arrow_up</span>
+      </button>
     </main>
     <footer class="footer">©2030 Web Design Conference</footer>
   </body>
