@@ -10,6 +10,7 @@
   --color-text-secondary: #707070;
   --color-text-secondary-weak: #aaa;
   --color-text-link: #7299ad;
+  --color-text-link-hover: #5a7988;
   --color-shadow: #888;
   --shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
@@ -238,6 +239,17 @@ a:hover {
   display: block;
 }
 
+html {
+  color: var(--color-text-black-dark);
+}
+
+a {
+  color: var(--color-text-link);
+}
+a:hover {
+  color: var(--color-text-link-hover);
+}
+
 .container {
   position: relative;
   margin: auto;
@@ -283,7 +295,7 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 40px;
+  padding: 40px 0;
   row-gap: 24px;
 }
 .site-list > * {
@@ -338,6 +350,9 @@ a:hover {
   width: 100%;
   font-size: 16px;
 }
+.site-table a {
+  text-decoration: underline;
+}
 .site-table tr {
   border-bottom: 1px solid #ddd;
 }
@@ -350,4 +365,12 @@ a:hover {
 .site-table td {
   padding: 16px;
   text-align: left;
+}
+.site-table ul {
+  list-style: disc;
+  padding-left: 16px;
+}
+.site-table ul li {
+  line-height: 1.2;
+  margin-bottom: 4px;
 }
