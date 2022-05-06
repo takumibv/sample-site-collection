@@ -3,6 +3,18 @@
 @import "./foundation/reset";
 @import "./foundation/base";
 
+html {
+  color: var(--color-text-black-dark);
+}
+
+a {
+  color: var(--color-text-link);
+
+  &:hover {
+    color: var(--color-text-link-hover);
+  }
+}
+
 .container {
   position: relative;
   margin: auto;
@@ -43,7 +55,7 @@
 .site-list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding: 40px 0;
   row-gap: 24px;
 
   > * {
@@ -98,6 +110,10 @@
   width: 100%;
   font-size: 16px;
 
+  a {
+    text-decoration: underline;
+  }
+
   tr {
     border-bottom: 1px solid #ddd;
   }
@@ -112,5 +128,15 @@
   td {
     padding: 16px;
     text-align: left;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 16px;
+
+    li {
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
   }
 }
