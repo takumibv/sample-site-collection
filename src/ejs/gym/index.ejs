@@ -87,6 +87,8 @@
       <section class="l-section">
         <div class="l-section__bg">
           <img
+            width="600"
+            height="347"
             src="<%= root %>/assets/images/gym/about-food.png"
             alt=""
             srcset="<%= root %>/assets/images/gym/about-food.png 1x, <%= root %>/assets/images/gym/about-food@2x.png 2x"
@@ -106,6 +108,8 @@
       <section class="l-section">
         <div class="l-section__bg">
           <img
+            width="600"
+            height="347"
             src="<%= root %>/assets/images/gym/about-training.png"
             alt=""
             srcset="<%= root %>/assets/images/gym/about-training.png 1x, <%= root %>/assets/images/gym/about-training@2x.png 2x"
@@ -122,152 +126,257 @@
           </div>
         </div>
       </section>
-      <button class="btn">無料カウンセリングを受ける</button>
-      <section class="l-wave-section">
-        <h2 class="l-wave-section__title">Our Trainer</h2>
-        <p class="l-wave-section__subtitle">トレーナー</p>
-        <div>
-          <div class="c-card">
-            <div class="c-card__image">
-              <img
-                src="<%= root %>/assets/images/gym/trainer01.png"
-                alt=""
-                srcset="<%= root %>/assets/images/gym/trainer01.png 1x, <%= root %>/assets/images/gym/trainer01@2x.png 2x"
-              />
-            </div>
-            <div class="c-card__content">
-              こんにちは！英語で楽しくトレーニングしましょう。日本語が話せますのでご安心ください。
-            </div>
-          </div>
-          <div class="c-card">
-            <div class="c-card__image">
-              <img
-                src="<%= root %>/assets/images/gym/trainer02.png"
-                alt=""
-                srcset="<%= root %>/assets/images/gym/trainer02.png 1x, <%= root %>/assets/images/gym/trainer02@2x.png 2x"
-              />
-            </div>
-            <div class="c-card__content">
-              Hello! 筋肉をつけすぎずしなやかな体を作ることが得意です！美しさを磨いていきましょう。
-            </div>
-          </div>
-          <div class="c-card">
-            <div class="c-card__image">
-              <img
-                src="<%= root %>/assets/images/gym/trainer03.png"
-                alt=""
-                srcset="<%= root %>/assets/images/gym/trainer03.png 1x, <%= root %>/assets/images/gym/trainer03@2x.png 2x"
-              />
-            </div>
-            <div class="c-card__content">
-              Hi,
-              負荷や強度の高いトレーニングがしたいならおまかせてください！どんなご要望もできるかぎり叶えますよ！
-            </div>
-          </div>
+      <section class="l-section">
+        <div class="l-container l-container--sm">
+          <button class="btn btn--block">無料カウンセリングを受ける</button>
         </div>
+      </section>
+      <section class="l-wave-section">
+        <img class="l-wave-section__wave-top" src="<%= root %>/assets/images/gym/wave.svg" />
+        <div class="l-container">
+          <h2 class="l-wave-section__title">Our Trainer</h2>
+          <p class="l-wave-section__subtitle">トレーナー</p>
+          <div class="c-tabs">
+            <a href="#" class="c-tab c-tab--active">トレーナー</a>
+            <a href="#" class="c-tab">スタッフ</a>
+          </div>
+          <div class="c-tab-content p-trainer-cards">
+            <div class="c-card">
+              <div class="c-card__image">
+                <img
+                  src="<%= root %>/assets/images/gym/trainer01.png"
+                  width="250"
+                  height="243"
+                  alt=""
+                  srcset="<%= root %>/assets/images/gym/trainer01.png 1x, <%= root %>/assets/images/gym/trainer01@2x.png 2x"
+                />
+              </div>
+              <div class="c-card__content">
+                こんにちは！英語で楽しくトレーニングしましょう。日本語が話せますのでご安心ください。
+              </div>
+            </div>
+            <div class="c-card">
+              <div class="c-card__image">
+                <img
+                  src="<%= root %>/assets/images/gym/trainer02.png"
+                  width="250"
+                  height="243"
+                  alt=""
+                  srcset="<%= root %>/assets/images/gym/trainer02.png 1x, <%= root %>/assets/images/gym/trainer02@2x.png 2x"
+                />
+              </div>
+              <div class="c-card__content">
+                Hello!
+                筋肉をつけすぎずしなやかな体を作ることが得意です！美しさを磨いていきましょう。
+              </div>
+            </div>
+            <div class="c-card">
+              <div class="c-card__image">
+                <img
+                  src="<%= root %>/assets/images/gym/trainer03.png"
+                  width="250"
+                  height="243"
+                  alt=""
+                  srcset="<%= root %>/assets/images/gym/trainer03.png 1x, <%= root %>/assets/images/gym/trainer03@2x.png 2x"
+                />
+              </div>
+              <div class="c-card__content">
+                Hi,
+                負荷や強度の高いトレーニングがしたいならおまかせてください！どんなご要望もできるかぎり叶えますよ！
+              </div>
+            </div>
+          </div>
+          <div class="c-tab-content p-trainer-cards">
+            <div class="c-card">
+              <div class="c-card__image">
+                <img
+                  src="<%= root %>/assets/images/gym/staff01.png"
+                  width="250"
+                  height="243"
+                  alt=""
+                  srcset="<%= root %>/assets/images/gym/staff01.png 1x, <%= root %>/assets/images/gym/staff01@2x.png 2x"
+                />
+              </div>
+              <div class="c-card__content">
+                ENBODYは明るくてとっても楽しいジムです！みなさんのセッションが楽しくなるようしっかりサポートいたします。
+              </div>
+            </div>
+            <div class="c-card">
+              <div class="c-card__image">
+                <img
+                  src="<%= root %>/assets/images/gym/staff02.png"
+                  width="250"
+                  height="243"
+                  alt=""
+                  srcset="<%= root %>/assets/images/gym/staff02.png 1x, <%= root %>/assets/images/gym/staff02@2x.png 2x"
+                />
+              </div>
+              <div class="c-card__content">
+                Hi, please let me know anytime if you have any questions. We will fully support you!
+              </div>
+            </div>
+        </div>
+        <img class="l-wave-section__wave-bottom" src="<%= root %>/assets/images/gym/wave.svg" />
       </section>
 
       <section class="l-section">
-        <h2 class="l-section__title">Studio</h2>
-        <p class="l-section__subtitle">スタジオ</p>
-        <div class="l-section__content">
-          <!-- カルーセル -->
+        <div class="l-container">
+          <h2 class="l-section__title">Studio</h2>
+          <p class="l-section__subtitle">スタジオ</p>
+          <div class="l-section__content">
+            <div class="swiper p-studio-swiper js-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="<%= root %>/assets/images/gym/studio01.png"
+                    width="111"
+                    height="67"
+                    alt=""
+                    srcset="<%= root %>/assets/images/gym/studio01.png 1x, <%= root %>/assets/images/gym/studio01@2x.png 2x"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="<%= root %>/assets/images/gym/studio02.png"
+                    width="111"
+                    height="67"
+                    alt=""
+                    srcset="<%= root %>/assets/images/gym/studio02.png 1x, <%= root %>/assets/images/gym/studio02@2x.png 2x"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="<%= root %>/assets/images/gym/studio03.png"
+                    width="111"
+                    height="67"
+                    alt=""
+                    srcset="<%= root %>/assets/images/gym/studio03.png 1x, <%= root %>/assets/images/gym/studio03@2x.png 2x"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-nav-button swiper-button-prev">
+                <span class="material-symbols-rounded">navigate_before</span>
+              </div>
+              <div class="swiper-nav-button swiper-button-next">
+                <span class="material-symbols-rounded">navigate_next</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="l-wave-section">
-        <h2 class="l-wave-section__title">Price</h2>
-        <p class="l-wave-section__subtitle">料金</p>
-        <div class="p-price-card-list">
-          <div class="p-price-card">
-            <div class="p-price-card__badge">オススメ！</div>
-            <p class="p-price-card__header-text">週１コース</p>
-            <h3 class="p-price-card__title">¥20,000</h3>
-            <p class="p-price-card__subtitle">（入会金 ¥10000）</p>
-            <dl class="p-price-card__dl">
-              <dt>レンタル</dt>
-              <dd>タオル、ウェア、プロテイン無料</dd>
-            </dl>
-            <dl class="p-price-card__dl">
-              <dt>レストラン</dt>
-              <dd>使用不可</dd>
-            </dl>
-            <dl class="p-price-card__dl">
-              <dt>食事指導</dt>
-              <dd>無し</dd>
-            </dl>
+        <img class="l-wave-section__wave-top" src="<%= root %>/assets/images/gym/wave.svg" />
+        <div class="l-container">
+          <h2 class="l-wave-section__title">Price</h2>
+          <p class="l-wave-section__subtitle">料金</p>
+        </div>
+        <div class="u-relative">
+          <div class="p-price-card-scroll">
+            <span class="material-symbols-rounded"> arrow_right_alt </span>
+            <p>スクロール</p>
           </div>
-          <div class="p-price-card">
-            <div class="p-price-card__badge">オススメ！</div>
-            <p class="p-price-card__header-text">週１コース</p>
-            <h3 class="p-price-card__title">¥20,000</h3>
-            <p class="p-price-card__subtitle">（入会金 ¥10000）</p>
-            <dl class="p-price-card__dl">
-              <dt>レンタル</dt>
-              <dd>タオル、ウェア、プロテイン無料</dd>
-            </dl>
-            <dl class="p-price-card__dl">
-              <dt>レストラン</dt>
-              <dd>使用不可</dd>
-            </dl>
-            <dl class="p-price-card__dl">
-              <dt>食事指導</dt>
-              <dd>無し</dd>
-            </dl>
-          </div>
-          <div class="p-price-card">
-            <div class="p-price-card__badge">オススメ！</div>
-            <p class="p-price-card__header-text">週１コース</p>
-            <h3 class="p-price-card__title">¥20,000</h3>
-            <p class="p-price-card__subtitle">（入会金 ¥10000）</p>
-            <dl class="p-price-card__dl">
-              <dt>レンタル</dt>
-              <dd>タオル、ウェア、プロテイン無料</dd>
-            </dl>
-            <dl class="p-price-card__dl">
-              <dt>レストラン</dt>
-              <dd>使用不可</dd>
-            </dl>
-            <dl class="p-price-card__dl">
-              <dt>食事指導</dt>
-              <dd>無し</dd>
-            </dl>
+          <div class="p-price-card-list">
+            <div class="p-price-card">
+              <p class="p-price-card__header-text">週１コース</p>
+              <h3 class="p-price-card__title">¥20,000</h3>
+              <p class="p-price-card__subtitle">（入会金 ¥10000）</p>
+              <dl class="p-price-card__dl">
+                <dt>レンタル</dt>
+                <dd>タオル、ウェア、プロテイン無料</dd>
+              </dl>
+              <dl class="p-price-card__dl">
+                <dt>レストラン</dt>
+                <dd>使用不可</dd>
+              </dl>
+              <dl class="p-price-card__dl">
+                <dt>食事指導</dt>
+                <dd>無し</dd>
+              </dl>
+            </div>
+            <div class="p-price-card">
+              <div class="p-price-card__badge">オススメ！</div>
+              <p class="p-price-card__header-text">週１コース</p>
+              <h3 class="p-price-card__title">¥20,000</h3>
+              <p class="p-price-card__subtitle">（入会金 ¥10000）</p>
+              <dl class="p-price-card__dl">
+                <dt>レンタル</dt>
+                <dd>タオル、ウェア、プロテイン無料</dd>
+              </dl>
+              <dl class="p-price-card__dl">
+                <dt>レストラン</dt>
+                <dd>使用不可</dd>
+              </dl>
+              <dl class="p-price-card__dl">
+                <dt>食事指導</dt>
+                <dd>無し</dd>
+              </dl>
+            </div>
+            <div class="p-price-card">
+              <p class="p-price-card__header-text">週１コース</p>
+              <h3 class="p-price-card__title">¥20,000</h3>
+              <p class="p-price-card__subtitle">（入会金 ¥10000）</p>
+              <dl class="p-price-card__dl">
+                <dt>レンタル</dt>
+                <dd>タオル、ウェア、プロテイン無料</dd>
+              </dl>
+              <dl class="p-price-card__dl">
+                <dt>レストラン</dt>
+                <dd>使用不可</dd>
+              </dl>
+              <dl class="p-price-card__dl">
+                <dt>食事指導</dt>
+                <dd>無し</dd>
+              </dl>
+            </div>
           </div>
         </div>
+        <img class="l-wave-section__wave-bottom" src="<%= root %>/assets/images/gym/wave.svg" />
       </section>
 
-      <section class="l-section">
-        <h2 class="l-section__title">FAQ</h2>
-        <p class="l-section__subtitle">よくあるご質問</p>
-        <div class="l-section__content">
-          <div class="p-qr-accordion">
-            <div class="p-qr-accordion__header">
-              <h3 class="p-qr-accordion__question">見学や体験は可能ですか？</h3>
+      <section class="l-section p-qa-section">
+        <div class="l-container">
+          <h2 class="l-section__title">FAQ</h2>
+          <p class="l-section__subtitle">よくあるご質問</p>
+          <div class="l-section__content">
+            <div class="p-qr-accordion js-accordion">
+              <div class="p-qr-accordion__header">
+                <h3 class="p-qr-accordion__question"><span>見学や体験は可能ですか？</span></h3>
+              </div>
+              <div class="p-qr-accordion__content js-accordion__content">
+                <p class="p-qr-accordion__answer">
+                  <span>
+                    無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
+                  </span>
+                </p>
+              </div>
             </div>
-            <div class="p-qr-accordion__content">
-              <p class="p-qr-accordion__answer">
-                無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
-              </p>
+            <div class="p-qr-accordion js-accordion">
+              <div class="p-qr-accordion__header">
+                <h3 class="p-qr-accordion__question">
+                  <span>用意するものは何がありますか？</span>
+                </h3>
+              </div>
+              <div class="p-qr-accordion__content js-accordion__content">
+                <p class="p-qr-accordion__answer">
+                  <span>
+                    シューズをご持参ください。ウェアとタオルは無料でレンタルが可能です。
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="p-qr-accordion">
-            <div class="p-qr-accordion__header">
-              <h3 class="p-qr-accordion__question">見学や体験は可能ですか？</h3>
-            </div>
-            <div class="p-qr-accordion__content">
-              <p class="p-qr-accordion__answer">
-                無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
-              </p>
-            </div>
-          </div>
-          <div class="p-qr-accordion">
-            <div class="p-qr-accordion__header">
-              <h3 class="p-qr-accordion__question">見学や体験は可能ですか？</h3>
-            </div>
-            <div class="p-qr-accordion__content">
-              <p class="p-qr-accordion__answer">
-                無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
-              </p>
+            <div class="p-qr-accordion js-accordion">
+              <div class="p-qr-accordion__header">
+                <h3 class="p-qr-accordion__question"><span>シャワールームはありますか？</span></h3>
+              </div>
+              <div class="p-qr-accordion__content js-accordion__content">
+                <p class="p-qr-accordion__answer">
+                  <span>
+                    5つのシャワールームがございます。ボディソープ・シャンプー・リンスなどのアメニティやドライヤーもご用意しております。
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -278,18 +387,21 @@
           alt=""
           srcset="<%= root %>/assets/images/gym/sp_cta.png 1x, <%= root %>/assets/images/gym/sp_cta@2x.png 2x"
         />
-        <div class="l-container">
+        <div class="l-container l-container--sm">
           <p class="p-footer-message__text">Come join us!! 😊</p>
           <div class="p-footer-message__btn">
             <button class="btn">無料カウンセリングを受ける</button>
           </div>
         </div>
       </section>
+      <button class="p-fab-btn">
+        <span class="p-fab-btn__icon material-symbols-rounded">keyboard_arrow_up</span>
+      </button>
     </main>
     <footer class="l-footer">
       <img
         class="l-footer__logo"
-        src="<%= root %>/assets/images/cafe/logo_white.svg"
+        src="<%= root %>/assets/images/gym/logo_white.svg"
         alt="sky coffee"
       />
     </footer>

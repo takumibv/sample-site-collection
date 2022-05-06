@@ -6,7 +6,6 @@ $(function () {
     e.preventDefault();
     const href = $(e.currentTarget).attr("href");
     const $target = $(href);
-    console.log("$target::", $target);
 
     if (!$target.length) return;
 
