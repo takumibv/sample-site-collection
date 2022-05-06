@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 const glob = require("glob");
 
-const entries = ["top", "cafe", "company", "seminar"];
+const entries = ["top", "cafe", "company", "seminar", "gym"];
 
 module.exports = {
   mode: "production",
@@ -26,6 +26,16 @@ module.exports = {
             compact: false,
           },
         },
+      },
+      {
+        test: /\.css/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: { url: false },
+          },
+        ],
       },
     ],
   },
