@@ -910,6 +910,10 @@ textarea.textbox {
   -webkit-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+.fab-btn:hover {
+  opacity: 0.8;
 }
 @media (min-width: 820px) {
   .fab-btn {
