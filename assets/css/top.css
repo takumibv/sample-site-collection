@@ -321,6 +321,9 @@ a:hover {
 
 .site__link img {
   width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
   border: 1px solid #ddd;
 }
 
