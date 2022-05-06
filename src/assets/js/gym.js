@@ -52,4 +52,51 @@ $(function () {
       "swing"
     );
   });
+
+  $(".p-price-card-list").on("scroll", (e) => {
+    $(".p-price-card-scroll").hide();
+  });
+
+  // タブ
+  $(document).on("click", ".c-tab", (e) => {
+    e.preventDefault();
+
+    const $target = $(e.currentTarget).closest(".c-tab");
+    const $content = $("#" + $target.attr("data-target-id"));
+
+    console.log($target.attr("data-target-id"), $target, $content);
+
+    if (!$content.length) return;
+
+    $(".c-tab").removeClass("c-tab--active");
+    $(".c-tab-content").removeClass("c-tab-content--active");
+
+    $target.addClass("c-tab--active");
+    $content.addClass("c-tab-content--active");
+  });
+
+  // 動きのきっかけとなるアニメーションの名前を定義
+  function fadeAnime() {
+    // ふわっ
+    $(".js-fade-up-trigger").each(function () {
+      var elemPos = $(this).offset().top - 50;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll >= elemPos - windowHeight) {
+        $(this).addClass("u-fade-up");
+      } else {
+        $(this).removeClass("u-fade-up");
+      }
+    });
+  }
+
+  // 画面をスクロールをしたら動かしたい場合の記述
+  $(window).scroll(function () {
+    fadeAnime(); /* アニメーション用の関数を呼ぶ*/
+  }); // ここまで画面をスクロールをしたら動かしたい場合の記述
+
+  // 画面が読み込まれたらすぐに動かしたい場合の記述
+  $(window).on("load", function () {
+    fadeAnime(); /* アニメーション用の関数を呼ぶ*/
+  }); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 });
