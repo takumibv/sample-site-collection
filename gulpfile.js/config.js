@@ -7,7 +7,7 @@ const config = {
       dest: "./public/",
     },
     copy: {
-      src: "./src/**/*.+(html|pdf|jpg|png|gif|svg|ico)",
+      src: "./src/**/*.+(html|pdf|ico)",
     },
     scss: {
       src: "./src/assets/scss/**/*.scss",
@@ -24,6 +24,9 @@ const config = {
       src: "./src/assets/js/**/*.js",
       dest: "./public/assets/js/",
     },
+    imagemin: {
+      src: "./src/**/*.+(jpg|jpeg|png|gif|svg)",
+    },
   },
   scss: {
     options: {
@@ -36,6 +39,8 @@ const config = {
     },
     startPath: "/",
   },
+  pngquant: { speed: 1 },
+  mozjpeg: { quality: 65 },
   webpack: {
     prod: "../webpack.prod.js",
     common: "../webpack.common.js",

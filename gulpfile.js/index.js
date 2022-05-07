@@ -1,8 +1,15 @@
+// 参考
+// https://hakoirioyaji.com/blog/gulp-webpack-javascript/
+//
+
 const gulp = require("gulp");
 const cache = require("gulp-cached");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
 const rimraf = require("rimraf");
+const imagemin = require("gulp-imagemin");
+const mozjpeg = require("imagemin-mozjpeg");
+const pngquant = require("imagemin-pngquant");
 const browserSync = require("browser-sync");
 const plumber = require("gulp-plumber");
 const debug = require("gulp-debug"); // ログ表示
@@ -27,6 +34,20 @@ const copy = async () =>
     .src(config.path.copy.src, { base: config.path.root.src })
     .pipe(cache("copy"))
     .pipe(plumber())
+    .pipe(gulp.dest(config.path.root.dest));
+
+const minifyImage = async () =>
+  await gulp
+    .src(config.path.imagemin.src, { base: config.path.root.src })
+    .pipe(plumber())
+    .pipe(
+      imagemin([
+        imagemin.gifsicle(),
+        imagemin.svgo(),
+        pngquant(config.pngquant),
+        mozjpeg(config.mozjpeg),
+      ])
+    )
     .pipe(gulp.dest(config.path.root.dest));
 
 const ejsCompile = async () =>
@@ -62,15 +83,19 @@ const jsCompile = async () => {
 };
 
 const watch = () => {
-  gulp.watch(config.path.root.src, gulp.series(copy, ejsCompile, sassCompile, jsCompile));
+  gulp.watch(
+    config.path.root.src,
+    gulp.series(copy, minifyImage, ejsCompile, sassCompile, jsCompile)
+  );
 };
 
-const build = gulp.series(clarn, copy, ejsCompile, sassCompile, jsCompile);
+const build = gulp.series(clarn, copy, minifyImage, ejsCompile, sassCompile, jsCompile);
 
 exports.build = build;
 exports.default = gulp.series(
   clarn,
   copy,
+  minifyImage,
   ejsCompile,
   sassCompile,
   jsCompile,
