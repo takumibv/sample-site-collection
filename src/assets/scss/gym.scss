@@ -1022,3 +1022,10 @@ body {
     transform: translateY(0);
   }
 }
+
+.u-fade-in {
+  animation-name: opacityAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
