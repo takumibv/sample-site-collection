@@ -1397,3 +1397,12 @@ body {
             transform: translateY(0);
   }
 }
+.u-fade-in {
+  -webkit-animation-name: opacityAnime;
+          animation-name: opacityAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}

@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="5" height="9" viewBox="0 0 5 9">
-  <path id="icon_arrow-right" d="M3.757.826a1,1,0,0,1,1.487,0L7.5,3.331A1,1,0,0,1,6.755,5H2.245A1,1,0,0,1,1.5,3.331Z" transform="translate(5) rotate(90)" fill="#24a8bf"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="5" height="9"><path d="M4.174 3.757a1 1 0 010 1.487L1.669 7.5A1 1 0 010 6.755v-4.51A1 1 0 011.669 1.5z" fill="#24a8bf"/></svg>
