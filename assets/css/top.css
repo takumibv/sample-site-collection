@@ -360,11 +360,17 @@ a:hover {
   color: #888;
   padding: 16px;
   text-align: left;
-  width: 220px;
+  white-space: nowrap;
+}
+@media (min-width: 1180px) {
+  .site-table th {
+    width: 220px;
+  }
 }
 .site-table td {
   padding: 16px;
   text-align: left;
+  word-break: break-all;
 }
 .site-table ul {
   list-style: disc;
