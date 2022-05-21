@@ -295,7 +295,7 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 40px 0;
+  padding: 40px 16px;
   row-gap: 24px;
 }
 .site-list > * {
@@ -315,7 +315,12 @@ a:hover {
 .site {
   background-color: #fff;
   border-radius: 8px;
-  padding: 16px 24px;
+  padding: 16px;
+}
+@media (min-width: 1180px) {
+  .site {
+    padding: 16px 24px;
+  }
 }
 
 .site__title {

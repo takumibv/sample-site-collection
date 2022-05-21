@@ -225,6 +225,7 @@ body {
   margin: auto;
   padding: 0 20px;
   width: 100%;
+  overflow: hidden;
 }
 @media (min-width: 820px) {
   .container {
@@ -339,6 +340,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  overflow: hidden;
 }
 .drawer__header-nav-toggle .material-symbols-outlined {
   font-size: 32px;
@@ -407,6 +409,9 @@ body {
   }
 }
 
+.hero__bg {
+  width: 100%;
+}
 .hero__bg source,
 .hero__bg img {
   width: 100%;

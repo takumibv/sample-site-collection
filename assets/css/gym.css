@@ -909,15 +909,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 8px;
-     -moz-column-gap: 8px;
-          column-gap: 8px;
 }
 @media (min-width: 820px) {
   .p-studio-swiper .swiper-pagination {
-    -webkit-column-gap: 10px;
-       -moz-column-gap: 10px;
-            column-gap: 10px;
     height: 15px;
   }
 }
@@ -927,11 +921,13 @@ body {
   height: 7px;
   border-radius: 50%;
   background: #eaeaea;
+  margin: 0 4px;
 }
 @media (min-width: 820px) {
   .p-studio-swiper .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
+    margin: 0 5px;
   }
 }
 .p-studio-swiper .swiper-pagination-bullet-active {
@@ -1000,7 +996,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
-  margin-top: -24px;
   padding-top: 24px;
   padding-right: 20px;
 }
@@ -1370,6 +1365,10 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
 }
 
 @-webkit-keyframes fadeUpAnime {
