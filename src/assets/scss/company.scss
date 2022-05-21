@@ -14,6 +14,7 @@ body {
   margin: auto;
   padding: 0 20px;
   width: 100%;
+  overflow: hidden;
 
   @include breakpoint-pc() {
     max-width: $container-width-pc;
@@ -113,6 +114,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  overflow: hidden;
 
   .material-symbols-outlined {
     font-size: 32px;
@@ -179,6 +181,8 @@ body {
 }
 
 .hero__bg {
+  width: 100%;
+
   source,
   img {
     width: 100%;

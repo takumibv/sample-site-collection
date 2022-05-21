@@ -593,10 +593,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 8px;
 
     @include breakpoint-pc() {
-      column-gap: 10px;
       height: 15px;
     }
   }
@@ -607,10 +605,12 @@ body {
     height: 7px;
     border-radius: 50%;
     background: #eaeaea;
+    margin: 0 4px;
 
     @include breakpoint-pc() {
       width: 15px;
       height: 15px;
+      margin: 0 5px;
     }
   }
 
@@ -672,7 +672,6 @@ body {
 .p-price-card-list {
   display: flex;
   overflow-x: auto;
-  margin-top: -24px;
   padding-top: 24px;
   padding-right: 20px;
 
@@ -1009,6 +1008,10 @@ body {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
 }
 
 @keyframes fadeUpAnime {
