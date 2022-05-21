@@ -55,7 +55,7 @@ a {
 .site-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px 0;
+  padding: 40px 16px;
   row-gap: 24px;
 
   > * {
@@ -74,7 +74,11 @@ a {
 .site {
   background-color: #fff;
   border-radius: 8px;
-  padding: 16px 24px;
+  padding: 16px;
+
+  @include breakpoint-pc() {
+    padding: 16px 24px;
+  }
 }
 
 .site__title {
